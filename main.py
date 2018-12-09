@@ -1,4 +1,3 @@
-![DSM-Logo](logo.png)
 """
 대덕소프웨어마이스터고등학교 전공심화과정 배치 점수 산출기
 Major Course Assignment Score Calculator for Daedeok Software Meister High School
