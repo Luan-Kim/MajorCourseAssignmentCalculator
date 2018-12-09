@@ -46,7 +46,7 @@ def warning():
 def report(string, custom=False, score=0):
     print("-" * 55)
     print("\t\t{}".format(string)
-    print("\t1학년 ( {} ) 반 ( {} ) 번 \t학 생 : {} (인)\n\t\t\t\t\t\t\t\t학부모 : {} (인)".format(cls, nbr, name, parent))
+    print("\t1학년 ( {} ) 반 ( {} ) 번 \t학 생 : {} (인)\n\t\t\t학부모 : {} (인)".format(cls, nbr, name, parent))
     print("\t" + "*" * 40)
     print("\t1학년\t배정과정\t희망 순위")
     print("\t" + "*" * 40)
