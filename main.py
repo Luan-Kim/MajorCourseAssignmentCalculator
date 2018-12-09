@@ -43,7 +43,7 @@ def warning():
     print("알림: 이 소프트웨어는 개인 프로젝트이며, 대덕소프트웨어마이스터고등학교로부터 어떠한 인가도 받지 않았습니다.\n\n")
 
     
-def report(string):
+def report(string, custom=False, score=0):
     print("-" * 55)
     print("\t\t{}".format(" ".join(string.split())))
     print("\t1학년 ( {} ) 반 ( {} ) 번 \t학 생 : {} (인)\n\t\t\t\t\t\t\t\t학부모 : {} (인)".format(cls, nbr, name, parent))
@@ -53,6 +53,9 @@ def report(string):
     print("\t\t\tSW개발과\t\t{}".format(major[0]))
     print("\t공통과정\t임베디드SW과\t\t{}".format(major[1]))
     print("\t\t\t정보보안과\t\t{}".format(major[2]))
+    if custom:
+        print("\t" + "*" * 40)
+        print("\t최종점수: {}".format(score))
     print("\n\t대덕소프트웨어마이스터고등학교장")
     print("-" * 55)
     
@@ -103,7 +106,7 @@ def assign():
         except:
             print("값이 이상합니다.\n")
 
-    report()
+    report("전공과정 배정 희망 신청서")
 
 
 def get_subject(semester=2):
@@ -208,20 +211,8 @@ def calculate():
     certified = get_certificate_score()
     score = round((calculated / subject * 20 * 0.7) + (certified * 2 / 5 * 0.3), 2)
 
-    print("-" * 55)
-    print("\t\t전 공 과 정  배 정  점 수  산 출 표")
-    print("\t1학년 ( {} ) 반 ( {} ) 번 \t학 생 : {} (인)\n\t\t\t\t\t학부모 : {} (인)".format(cls, nbr, name, parent))
-    print("\t" + "*" * 40)
-    print("\t1학년\t\t배정과정\t\t희망 순위")
-    print("\t" + "*" * 40)
-    print("\t\t\t\tSW개발과\t\t\t{}".format(major[0]))
-    print("\t공통과정\t임베디드SW과\t\t{}".format(major[1]))
-    print("\t\t\t\t정보보안과\t\t\t{}".format(major[2]))
-    print("\t" + "*" * 40)
-    print("\t최종점수: {}".format(score))
-    print("\n\t대덕소프트웨어마이스터고등학교장")
-    print("-" * 55)
-
+    report("전공과정 배정 점수 산출표", custom=True, score=score)
+ 
 
 def main():
     warning()
