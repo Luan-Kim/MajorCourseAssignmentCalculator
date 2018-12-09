@@ -42,7 +42,21 @@ def response(string="계속하려면 아무 키나 누르십시오..."):
 def warning():
     print("알림: 이 소프트웨어는 개인 프로젝트이며, 대덕소프트웨어마이스터고등학교로부터 어떠한 인가도 받지 않았습니다.\n\n")
 
-
+    
+def report(string):
+    print("-" * 55)
+    print("\t\t{}".format(" ".join(string.split())))
+    print("\t1학년 ( {} ) 반 ( {} ) 번 \t학 생 : {} (인)\n\t\t\t\t\t\t\t\t학부모 : {} (인)".format(cls, nbr, name, parent))
+    print("\t" + "*" * 40)
+    print("\t1학년\t배정과정\t희망 순위")
+    print("\t" + "*" * 40)
+    print("\t\t\tSW개발과\t\t{}".format(major[0]))
+    print("\t공통과정\t임베디드SW과\t\t{}".format(major[1]))
+    print("\t\t\t정보보안과\t\t{}".format(major[2]))
+    print("\n\t대덕소프트웨어마이스터고등학교장")
+    print("-" * 55)
+    
+    
 def info():
     print("\t- {}학년도 전공심화과정 배정 안내 -\n".format(datetime.datetime.now().year))
     print("1. 전공심화과정 배정 목적\n",
@@ -89,17 +103,7 @@ def assign():
         except:
             print("값이 이상합니다.\n")
 
-    print("-" * 55)
-    print("\t\t전 공 과 정  배 정  신 청 서")
-    print("\t1학년 ( {} ) 반 ( {} ) 번 \t학 생 : {} (인)\n\t\t\t\t\t\t\t\t학부모 : {} (인)".format(cls, nbr, name, parent))
-    print("\t" + "*" * 40)
-    print("\t1학년\t배정과정\t희망 순위")
-    print("\t" + "*" * 40)
-    print("\t\t\tSW개발과\t\t{}".format(major[0]))
-    print("\t공통과정\t임베디드SW과\t\t{}".format(major[1]))
-    print("\t\t\t정보보안과\t\t{}".format(major[2]))
-    print("\n\t대덕소프트웨어마이스터고등학교장")
-    print("-" * 55)
+    report()
 
 
 def get_subject(semester=2):
