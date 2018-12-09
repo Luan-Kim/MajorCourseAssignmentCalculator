@@ -206,7 +206,7 @@ def calculate():
 
     print("-" * 55)
     print("\t\t전 공 과 정  배 정  점 수  산 출 표")
-    print("\t1학년 ( {} ) 반 ( {} ) 번 \t학 생 : {} (인)\n\t\t\t\t\t\t\t\t학부모 : {} (인)".format(cls, nbr, name, parent))
+    print("\t1학년 ( {} ) 반 ( {} ) 번 \t학 생 : {} (인)\n\t\t\t\t\t학부모 : {} (인)".format(cls, nbr, name, parent))
     print("\t" + "*" * 40)
     print("\t1학년\t\t배정과정\t\t희망 순위")
     print("\t" + "*" * 40)
